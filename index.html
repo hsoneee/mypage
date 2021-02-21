@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>심혜선 포트폴리오</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/044bdd97f5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if (window.innerWidth <= 1200) {
+                var imgtag = document.getElementById("main_img");
+                imgtag.src = "images/main.jpg";
+            };
+            if (window.innerWidth <= 768) {
+                var imgtag = document.getElementById("main_img");
+                imgtag.src = "images/main_767.jpg";
+            };
+            var mql = window.matchMedia("screen and (max-width: 1200px)");
+            var mqm = window.matchMedia("screen and (max-width: 768px)");
+            mql.addListener(function(e) {
+                var imgtag = document.getElementById("main_img");
+                if (e.matches) {
+                    imgtag.src = "images/main_1200.jpg";
+                } else {
+                    imgtag.src = "images/main.jpg";
+                }
+            });
+            mqm.addListener(function(e) {
+                var imgtag = document.getElementById("main_img");
+                if (e.matches) {
+                    imgtag.src = "images/main_767.jpg";
+                } else {
+                    imgtag.src = "images/main_1200.jpg";
+                }
+            });
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <header class="header" id="header">
+            <h1><a href="#none" onclick="topMove()">HyeSeon</a></h1>
+            <ul>
+                <li><a href="#none" onclick="topMove()"><i class="fas fa-home m_icon"></i><span class="m_txt">HOME</span></a></li>
+                <li><a href="#none" onclick="fnMove('about')" class="m_about"><i class="fas fa-user m_icon"></i><span class="m_txt">ABOUT</span></a></li>
+                <li><a href="#none" onclick="fnMove('skills')" class="m_skills"><i class="fas fa-code m_icon"></i><span class="m_txt">SKILLS</span></a></li>
+                <li><a href="#none" onclick="fnMove('works')" class="m_works"><i class="fas fa-tasks m_icon"></i><span class="m_txt">WORKS</span></a></li>
+                <li><a href="#none" onclick="fnMove('contact')" class="m_contact"><i class="far fa-address-book m_icon"></i><span class="m_txt">CONTACT</span></a></li>
+            </ul>
+        </header>
+        <main class="content">
+            <section class="home" id="home">
+                <h2>HOME</h2>
+                <div class="home_con">
+                    <img src="images/main.jpg" alt="main image" id="main_img">
+                    <div class="animated-title">
+                        <div class="text-top">
+                            <div>
+                                <span>Welcome to</span>
+                                <span><span class="rtxt">HyeSeon's Portfolio!</span></span>
+                            </div>
+                        </div>
+                        <div class="text-bottom">
+                            <div>Front-End Developer</div>
+                        </div>
+                    </div><!--end (div animation-title)-->
+                </div><!--end (div home_con)-->
+            </section><!--end (section home)-->
+            <section class="about" id="about">
+                <h2>ABOUT</h2>
+                <h3>끊임없는 관심과 공부로 역량을 키워나가고 있습니다. <span>저는 충분히 소통하고 팀에 녹아드는 신입 프론트엔드 개발자입니다.</span></h3>
+                <section class="info">
+                    <h3 class="hide_txt">about 목록</h3>
+                    <article class="list">
+                        <h4 class="hide_txt">지원자 정보</h4>
+                        <ul class="infohs">
+                            <li><i class="fas fa-user"></i><span>심혜선</span></li>
+                            <li><i class="far fa-calendar-alt"></i>1997.03.19</li>
+                            <li><i class="fas fa-mobile-alt"></i>010.8937.8971</li>
+                            <li><i class="far fa-envelope"></i>hsshim319@naver.com</li>
+                        </ul>
+                        <h4>EDUCATION</h4>
+                        <ul class="education">
+                            <li><li>강남 그린컴퓨터 아카데미 UI/UX디자인 웹 퍼블리셔 및 프론트엔드 개발자 양성과정 수료 <span>2020.02 - 2020.08</span></li>
+                            <li>정보통신공학과 졸업 <span>2016.02 - 2020.02</span></li>
+                        </ul>
+                        <h4>CERTIFICATE</h4>
+                        <ul class="certificate">
+                            <li>웹디자인기능사 <span>2020.07</span></li>
+                            <li>정보처리기사 <span>2019.11</span></li>
+                            <li>GTQ PHOTOSHOP 1급 <span>2019.12</span></li>
+                            <li>Cos Pro Python 2급 <span>2019.12</span></li>
+                        </ul>
+                    </article><!--end (article info)-->
+                </section><!--end (section list)-->
+            </section><!--end (section about)-->
+            <section class="skills" id="skills">
+                <h2>SKILLS</h2>
+                <article class="list">
+                    <h3 class="hide_txt">skill 목록</h3>
+                    <section>
+                        <h4>BEST<i class="far fa-question-circle"></i></h4>
+                        <p>자주 사용하여 프로젝트에 자유롭게 사용할 수 있는 기술</p>
+                        <ul>
+                            <li><img src="images/bcf88620edb82fde57202ba9298c4406.svg" alt="skill_image">HTML5</li>
+                            <li><img src="images/iconfinder_css3_2916226.svg" alt="skill_image"><span>CSS3</span></li>
+                            <li><img src="images/28f82869ee5022726944ffd3ba6d73f3.svg" alt="skill_image">Javascript</li>
+                            <li><img src="images/d7b41ed654b5cfee2ac0e490ee045e13.png" alt="skill_image">JQuery</li>
+                            <li><img src="images/iconfinder_23_Photoshop_Adobe_logo_logos_4373282.svg" alt="skill_image">Photoshop</li>
+                        </ul>
+                    </section><!-- section best-->
+                    <section>
+                        <h4>GOOD<i class="far fa-question-circle"></i></h4>
+                        <p>기본적이고 자주 사용하는 기술을 프로젝트에 사용할 수 있는 기술</p>
+                        <ul>
+                            <li><img src="images/4123908a8d370a58dd2c80be25d82c6b.svg" alt="skill_image">Mysql</li>
+                            <li><img src="images/iconfinder_256_Php_4518869.svg" alt="skill_image">PHP</li>
+                            <li><img src="images/728ff5a8e44d74cd0f2359ef0a9ec88a.png" alt="skill_image">Git</li>
+                            <li><img src="images/iconfinder_Illustrator_289507.svg" alt="skill_image">Illustrator</li>
+                        </ul>
+                    </section><!-- section good-->
+                    <section>
+                        <h4>BETTER<i class="far fa-question-circle"></i></h4>
+                        <p>현재 공부 중, 계속해서 더 공부할 기술</p>
+                        <ul>
+                            <li><img src="images/c555537a3c1812df3ec05927275316f8.svg" alt="skill_image">React</li>
+                        </ul>
+                    </section><!-- section better-->
+                </article>
+                <!--end (article list)-->
+            </section><!--end (section skills)-->
+            <section class="works" id="works">
+                <h2>WORKS</h2>
+                <article class="list">
+                   <h3 class="hide_txt">works 목록</h3>
+                    <div class="port">
+                        <img src="images/portfolio.jpg" alt="">
+                        <a href="#none">
+                            <p class="title"><span>반응형 Web</span>Portfoilo WebPage</p>
+                            <p class="sub">지금 현재 웹페이지인 <span>포트폴리오 웹페이지</span></p>
+                        </a>
+                    </div><!--end(div port)-->
+                    <div class="kkdr">
+                        <img src="images/kkd_r.jpg" alt="kkd_img">
+                        <a href="#none">
+                            <p class="title"><span>반응형 web</span>KRISPYKREME DOUGHNUTS</p>
+                            <p class="sub">크리스피크림 도넛 모바일/태블릿 <span>반응형 페이지 리뉴얼</span></p>
+                        </a>
+                    </div><!--end(div kkdr)-->
+                    <div class="kkdpc">
+                        <img src="images/kkd_pc.jpg" alt="kkd_img">
+                        <a href="#none">
+                            <p class="title"><span>PC web</span>KRISPYKREME DOUGHNUTS</p>
+                            <p class="sub">크리스피크림 도넛 <span>웹페이지 리뉴얼</span></p>
+                        </a>
+                    </div><!--end(div kkdpc)-->
+                    <div class="jin">
+                        <img src="images/jinair_pc.jpg" alt="jinair_img">
+                        <a href="#none">
+                            <p class="title"><span>PC web</span>JINAIR</p>
+                            <p class="sub">진에어 웹페이지 리뉴얼</p>
+                        </a>
+                    </div><!--end(div jin)-->
+                    <div class="ilsa">
+                        <img src="images/ilsa.jpg" alt="ilsa_img">
+                        <a href="#none">
+                            <p class="title"><span>Android App</span>일사천리</p>
+                            <p class="sub">자전거 진동내비게이션 APP</p>
+                        </a>
+                    </div>
+                </article><!--end (article list)-->
+            </section><!-- end (section works)-->
+            <section class="contact" id="contact">
+                <h2>CONTACT</h2>
+                <h3>끊임없는 연구로 함께 성장하는 <span>개발자 "심혜선"이 되겠습니다.</span></h3>
+                <p><i class="fas fa-mobile-alt"></i><a href="sms:01089378971">010.8937.8971</a></p>
+                <p><i class="far fa-envelope"></i><a href="mailto:hsshim319@naver.com">hsshim319@naver.com</a></p>
+                <p><i class="fab fa-github"></i><a href="https://github.com/merorii" target="_blank">https://github.com/merorii</a></p>
+            </section><!--end (section contact)-->
+        </main>
+        <footer class="footer" id="footer">
+            <p class="top_btn"><a href="#none" onclick="topMove()">TOP</a></p>
+            <p>ⓒHyeSeon Shim 2020, All rights reserved.</p>
+        </footer>
+    </div>
+    <div class="modal_layout">
+        <div class="modal_bg"></div>
+        <article class="modal_content_1">
+            <div class="title">
+                <a href="#none" class="close"><i class="far fa-times-circle"></i></a>
+                <h4>Portfolio</h4>
+                <p>지금 현재 웹페이지인 포트폴리오 웹페이지</p>
+                <div class="a_link">
+                    <a href="https://github.com/merorii/mypage" target="_blank" class="link">Github 바로가기</a>
+                    <a href="https://merorii.github.io/mypage" target="_blank" class="link">WebPage 바로가기</a>
+                </div>
+            </div><!--end(div top)-->
+            <div class="content">
+                <h5>[현재 웹페이지, 개인 포트폴리오 사이트]</h5>
+                <p>상단 링크를 통해 github 또는 website로 이동하실 수 있습니다.</p>
+                <dl>
+                    <dt>LANGUAGE</dt>
+                    <dd>html5, css3, javascript, jquery</dd>
+                </dl>
+                <dl>
+                    <dt>FEATURE</dt>
+                    <dd>ONEPAGE SITE</dd>
+                    <dd>media query를 사용한 반응형 웹사이트 구현</dd>
+                    <dd>웹표준 준수<img src="images/html5-blue.png" alt="올바른 html5입니다!"><img src="images/css-green.png" alt="올바른 CSS입니다!"></dd>
+                    <dd>다양한 scroll 이벤트(헤더컬러변경, 스크롤 이동)</dd>
+                    <dd>다양한 hover 이벤트</dd>
+                    <dd>디자인, 개발 진행</dd>
+                </dl>
+                <h6>EXAMPLE</h6>
+                <div class="example">
+                    <div class="img_area">
+                        <ul class="img_list">
+                            <li class="img_con"><img src="images/portfolio.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/portfolio2.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/portfolio3.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/portfolio4.png" alt="portfolio image"></li>
+                        </ul>
+                    </div>
+                    <div class="btn_area">
+                        <a href="#none" class="prev">이전</a>
+                        <a href="#none" class="next">다음</a>
+                    </div>
+                </div><!--end(div example)-->
+            </div><!--end(div bottom)-->
+        </article>
+        <article class="modal_content_2">
+            <div class="title">
+                <a href="#none" class="close"><i class="far fa-times-circle"></i></a>
+                <h4>KRISPY KREME DOUGHNUTS</h4>
+                <p>크리스피크림 도넛 모바일/태블릿 반응형 페이지 리뉴얼</p>
+                <div class="a_link">
+                    <a href="https://github.com/merorii/Renewal_krispykreme/tree/master/mobile" target="_blank" class="link">Github 바로가기</a>
+                    <a href="http://hsshim.dothome.co.kr/krispykreme/mobile" target="_blank" class="link">WebPage 바로가기</a>
+                </div>
+            </div><!--end(div top)-->
+            <div class="content">
+                <h5>[크리스피크림도넛 반응형페이지 리뉴얼 (Tablet/Mobile)]</h5>
+                <p>상단 링크를 통해 github 또는 website로 이동하실 수 있습니다.</p>
+                <dl>
+                    <dt>LANGUAGE</dt>
+                    <dd>html5, css3, javascript, jquery, php, mysql</dd>
+                </dl>
+                <dl>
+                    <dt>FEATURE</dt>
+                    <dd>media query를 사용한 반응형 웹사이트 구현</dd>
+                    <dd>웹표준 준수<img src="images/html5-blue.png" alt="올바른 html5입니다!"><img src="images/css-green.png" alt="올바른 CSS입니다!"></dd>
+                    <dd>모든 기능(회원, 이벤트, 신메뉴 등...) DB연동하여 기능 제공</dd>
+                    <dd>기획, 디자인, 개발 진행</dd>
+                </dl>
+                <h6>EXAMPLE</h6>
+                <div class="example">
+                    <div class="img_area">
+                        <ul class="img_list">
+                            <li class="img_con"><img src="images/kkd_r.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/kkd_r2.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/kkd_r3.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/kkd_r4.jpg" alt="portfolio image"></li>
+                        </ul>
+                    </div>
+                    <div class="btn_area">
+                        <a href="#none" class="prev">이전</a>
+                        <a href="#none" class="next">다음</a>
+                    </div>
+                </div><!--end(div example)-->
+            </div><!--end(div bottom)-->
+        </article>
+        <article class="modal_content_3">
+            <div class="title">
+                <a href="#none" class="close"><i class="far fa-times-circle"></i></a>
+                <h4>KRISPY KREME DOUGHNUTS</h4>
+                <p>크리스피크림 도넛 웹페이지 리뉴얼</p>
+                <div class="a_link">
+                    <a href="https://github.com/merorii/Renewal_krispykreme" target="_blank" class="link">Github 바로가기</a>
+                    <a href="http://hsshim.dothome.co.kr/krispykreme/" target="_blank" class="link">WebPage 바로가기</a>
+                </div>
+            </div><!--end(div top)-->
+            <div class="content">
+                <h5>[크리스피크림도넛 웹페이지 리뉴얼 (PC ver)]</h5>
+                <p>상단 링크를 통해 github 또는 website로 이동하실 수 있습니다.</p>
+                <dl>
+                    <dt>LANGUAGE</dt>
+                    <dd>html5, css3, javascript, jquery, php, mysql</dd>
+                </dl>
+                <dl>
+                    <dt>FEATURE</dt>
+                    <dd>웹표준 준수<img src="images/html5-blue.png" alt="올바른 html5입니다!"><img src="images/css-green.png" alt="올바른 CSS입니다!"></dd>
+                    <dd>모든 기능(회원, 이벤트, 신메뉴, 매장list 등...) DB연동하여 기능 제공</dd>
+                    <dd>관리자페이지 제공(회원/신메뉴/공지사항/이벤트/메뉴리스트 삽입,수정,삭제 가능)<span>Test ID:admin / PW:********** (Password는 연락 주시면 알려드리겠습니다.)</span></dd>
+                    <dd>기획, 디자인, 개발 진행</dd>
+                    <dd>다양한 scroll 이벤트(헤더컬러변경, 스크롤 이동)</dd>
+                    <dd>다양한 hover 이벤트</dd>
+                </dl>
+                <h6>EXAMPLE</h6>
+                <div class="example">
+                    <div class="img_area">
+                        <ul class="img_list">
+                            <li class="img_con"><img src="images/kkd_pc.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/kkd_pc2.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/kkd_pc3.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/kkd_pc4.jpg" alt="portfolio image"></li>
+                        </ul>
+                    </div>
+                    <div class="btn_area">
+                        <a href="#none" class="prev">이전</a>
+                        <a href="#none" class="next">다음</a>
+                    </div>
+                </div><!--end(div example)-->
+            </div><!--end(div bottom)-->
+        </article>
+        <article class="modal_content_4">
+            <div class="title">
+                <a href="#none" class="close"><i class="far fa-times-circle"></i></a>
+                <h4>JINAIR</h4>
+                <p>진에어 웹페이지 리뉴얼</p>
+                <div class="a_link">
+                    <a href="https://github.com/merorii/Renewal_jinair" target="_blank" class="link">Github 바로가기</a>
+                    <a href="http://hsshim.dothome.co.kr/jinair" target="_blank" class="link">WebPage 바로가기</a>
+                </div>
+            </div><!--end(div top)-->
+            <div class="content">
+                <h5>[진에어 웹페이지 리뉴얼 (PC ver)]</h5>
+                <p>상단 링크를 통해 github 또는 website로 이동하실 수 있습니다.</p>
+                <dl>
+                    <dt>LANGUAGE</dt>
+                    <dd>html5, css3, javascript, jquery</dd>
+                </dl>
+                <dl>
+                    <dt>FEATURE</dt>
+                    <dd>웹표준 준수<img src="images/html5-blue.png" alt="올바른 html5입니다!"><img src="images/css-green.png" alt="올바른 CSS입니다!"></dd>
+                    <dd>기획, 디자인, 개발 진행</dd>
+                </dl>
+                <h6>EXAMPLE</h6>
+                <div class="example">
+                    <div class="img_area">
+                        <ul class="img_list">
+                            <li class="img_con"><img src="images/jinair_pc.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/jinair_pc2.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/jinair_pc3.jpg" alt="portfolio image"></li>
+                        </ul>
+                    </div>
+                    <div class="btn_area">
+                        <a href="#none" class="prev">이전</a>
+                        <a href="#none" class="next">다음</a>
+                    </div>
+                </div><!--end(div example)-->
+            </div><!--end(div bottom)-->
+        </article>
+        <article class="modal_content_5">
+            <div class="title">
+                <a href="#none" class="close"><i class="far fa-times-circle"></i></a>
+                <h4>일사천리</h4>
+                <p>자전거 진동내비게이션 APP 일사천리</p>
+                <div class="a_link">
+                    <a href="https://github.com/merorii/JAVA_ilsacheonlee" target="_blank" class="link">Github 바로가기</a>
+                    <a href="https://youtu.be/Nzw3pzGUqzY" target="_blank" class="link">홍보영상 바로가기</a>
+                </div>
+            </div>
+            <div class="content">
+                <h5><span>2020 졸업작품 / 2019한이음 공모전 입상작</span> [Android APP과 Arduino기반의 자전거 진동내비게이션 및 도난방지시스템]</h5>
+                <p>상단 링크를 통해 github 또는 youtube(홍보영상)로 이동하실 수 있습니다.</p>
+                <dl>
+                    <dt>LANGUAGE</dt>
+                    <dd>xml,java,php,mysql,(C/C++)</dd>
+                </dl>
+                <dl>
+                    <dt>FEATURE</dt>
+                    <dd>TEAM Project</dd>
+                    <dd>팀 내 역할 : android application 디자인 및 프론트앤드 개발, 기능연동, php/mysql 회원가입 및 로그인기능구현, 하드웨어케이스 3D Printing, PCB설계</dd>
+                    <dd>OPEN API사용</dd>
+                </dl>
+                <dl>
+                    <dt>EXPLAIN</dt>
+                    <dd>프로젝트명 : 자전거 진동내비게이션 및 도난방지시스템, 일사천리</dd>
+                    <dd>작업기간 : 2018.07 ~ 2019.12</dd>
+                    <dd>제작배경
+                        <ul>
+                        <li>자전거 이용자가 증가함에 따라 증가하는 자전거 교통사고 문제</li>
+                        <li class="ex">휴대전화를 확인하지 않아도 자전거에 부착된 디바이스로 회전정보를 인지함으로써 사용자가 보다 안전하게 목적지에 도착할 수 있도록 돕기 위해 개발</li>
+                        <li>비교적 치안이 좋은 한국이지만 빈번히 발생하는 자전거 도난 사례</li>
+                        <li class="ex">언제 어디서는 연동된 어플리케이션으로 자전거를 보다 쉽게 관리할 수 있도록 돕기 위해 개발</li>
+                        </ul>
+                   </dd>
+                   <dd>기능
+                       <ul>
+                           <li>진동 내비게이션</li>
+                           <li class="ex">연동된 어플리케이션에서 길찾기를 진행하면, 방향정보를 자전거에 부착된 디바이스의 진동센서로 전송하여 회전방향에 해당하는 핸들에 진동이 발생 / 부착된 디바이스에서 회전정보를 인식 후 어플리케이션으로 정상적인 회전여부를 전송</li>
+                           <li>내 자전거 찾기</li>
+                           <li class="ex">자전거에 부착된 디바이스의 GPS센서로 현재 위치를 측정한 후 wifi를 통해 서버에 현위치를 실시간으로 저장하면 어플리케이션에서 자전거의 현재 위치를 확인</li>
+                           <li>자전거보관소찾기</li>
+                           <li class="ex">반경 5km내 또는 원하는 지역의 공공자전거보관소의 위치를 확인</li>
+                           <li>도난감지 사이렌</li>
+                           <li class="ex">lock되어있는 자전거에 움직임이 발생하면 외부사이렌을 작동시킴</li>
+                           <li>날씨</li>
+                           <li class="ex">현위치의 날씨를 제공함</li>
+                       </ul>
+                   </dd>
+                </dl>
+                <p class="pdf"><i class="fas fa-link"></i> <a href="https://github.com/merorii/ilsa/blob/master/report/%EC%9D%BC%EC%82%AC%EC%B2%9C%EB%A6%AC%20%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf" target="_blank">보고서 pdf</a></p>
+                <h6>EXAMPLE</h6>
+                <div class="example">
+                    <div class="img_area">
+                        <ul class="img_list">
+                            <li class="img_con"><img src="images/ilsa.jpg" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa2.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa3.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa4.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa5.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa6.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa7.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa8.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa9.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa10.png" alt="portfolio image"></li>
+                            <li class="img_con"><img src="images/ilsa11.png" alt="portfolio image"></li>
+                        </ul>
+                    </div>
+                    <div class="btn_area">
+                        <a href="#none" class="prev">이전</a>
+                        <a href="#none" class="next">다음</a>
+                    </div>
+                </div><!--end(div example)-->
+            </div>
+        </article>
+    </div>
+</body></html>
